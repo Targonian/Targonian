@@ -1,0 +1,9 @@
+package targon.Sheep.Client.Window;
+
+import javax.swing.JFrame;
+
+public class MC_Window extends JFrame{
+	
+	
+
+}

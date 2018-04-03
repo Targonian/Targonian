@@ -1,0 +1,23 @@
+package targon.Sheep.Client.Events;
+
+import net.minecraft.client.gui.FontRenderer;
+
+public class Event {
+
+	public Object keyboardupdate;
+
+	public void keyboardupdate(int i) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public void TickUpdate() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void RenderUpdate(FontRenderer fontRenderer)
+	{
+		
+	}
+}

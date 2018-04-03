@@ -1,0 +1,21 @@
+package targon.Sheep.Client.Events;
+
+import targon.Sheep.Client.Core;
+import targon.Sheep.Client.Module;
+
+public class RenderEvent extends Event{
+
+	
+	
+	@Override
+	public void RenderUpdate() {
+		for(Module m : Core.INSTANCE.MODULE_MANAGER.modules)
+		{
+			if(m.isIS_RENDER()) {
+				m.onTick();
+			}
+		}
+		super.RenderUpdate();
+	}
+	
+}

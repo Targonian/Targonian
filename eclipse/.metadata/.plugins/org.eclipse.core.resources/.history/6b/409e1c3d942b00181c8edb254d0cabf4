@@ -1,0 +1,40 @@
+package targon.Sheep.Client.Modules;
+
+import targon.Sheep.Client.Module;
+
+public class FullBright extends Module{
+
+	
+	public FullBright() {
+		super("FullBright", 25, "P");
+	}
+	
+	public void onEnable() {
+		setIS_TICKING(true);
+		GammaHack();
+		super.onEnable();
+		getCore().Print("Gamma: " + getMc().gameSettings.gammaSetting);
+	}
+	
+	public void onDisable() 
+	{
+		setIS_TICKING(false);
+		getMc().gameSettings.gammaSetting = 1F ;
+		super.onDisable();
+		getCore().Print("Gamma: " + getMc().gameSettings.gammaSetting);
+	}
+	
+	private void GammaHack()
+	{
+
+	}
+
+	
+	public void onTick() {
+		if(getMc().gameSettings.gammaSetting<220F) {
+			getMc().gameSettings.gammaSetting+=0.12F;
+		}
+		super.onTick();
+	}
+	
+}

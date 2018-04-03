@@ -1,0 +1,32 @@
+package sheep.Client.Modules;
+
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.EnumHandSide;
+import net.minecraft.util.math.BlockPos;
+import sheep.Client.Module;
+
+public class KillAura extends Module {
+
+	public KillAura() {
+		super("Killaura", 19, "R");
+	}
+
+	public void onEnable() {
+		setTICK(true);
+		super.onEnable();
+	}
+
+	public void onDisable() {
+		super.onDisable();
+	}
+
+	public void onTick() {
+		if (isTICK()) {
+			
+		}
+		super.onRender();
+	}
+
+	
+
+}

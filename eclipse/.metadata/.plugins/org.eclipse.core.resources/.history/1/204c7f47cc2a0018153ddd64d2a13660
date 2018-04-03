@@ -1,0 +1,17 @@
+package targon.Sheep.Client.Events;
+
+public class Event {
+
+	public Object keyboardupdate;
+
+	public void keyboardupdate(int i) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public void TickUpdate() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,62 @@
+//package targon.Sheep.Client.Modules;
+//
+//import java.util.Iterator;
+//
+//import com.ibm.icu.impl.TimeZoneGenericNames.GenericNameType;
+//
+//import net.minecraft.advancements.PlayerAdvancements;
+//import net.minecraft.entity.Entity;
+//import net.minecraft.entity.EntityLivingBase;
+//import net.minecraft.entity.player.EntityPlayer;
+//import net.minecraft.server.MinecraftServer;
+//import net.minecraft.util.EnumHand;
+//import net.minecraft.util.Timer;
+//import net.minecraft.util.math.BlockPos;
+//import net.minecraft.world.World;
+//import targon.Sheep.Client.Module;
+//
+//public class ESP extends Module {
+//	
+//	int range = 5;
+//
+//	public ESP() {
+//		super("ESP", 47, "V");
+//	}
+//
+//	public void onEnable() {
+//		setIS_TICKING(true);
+//		super.onEnable();
+//	}
+//
+//	public void onDisable() {
+//		setIS_TICKING(false);
+//		super.onDisable();
+//	}
+//	
+//	
+//	World mcw;
+//
+//	public void onTick() {
+//		mcw =	getMc().player.world; 
+//		time++;
+//		for(Iterator<Entity> entities = mcw.loadedEntityList.iterator(); entities.hasNext();)
+//		{
+//			Entity t_E = entities.next();
+//			if(t_E instanceof EntityPlayer)
+//			{
+//				if(t_E.getName().equalsIgnoreCase(getMc().player.getName()))
+//				{
+//					
+//				}else {
+//					if(getMc().player.getDistanceToEntity(t_E) <= range && time >= delay) {
+//					getMc().player.swingArm(EnumHand.MAIN_HAND);
+//					getMc().playerController.attackEntity(getMc().player, t_E);
+//					time = 0;
+//					}
+//				}
+//			}
+//		}
+//
+//		super.onTick();
+//	}
+//}

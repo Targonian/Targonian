@@ -1,0 +1,19 @@
+package targon.Sheep.Client.Events;
+
+import net.minecraft.client.gui.FontRenderer;
+import targon.Sheep.Client.Core;
+import targon.Sheep.Client.Module;
+
+public class RenderEvent extends Event{
+
+	public void RenderUpdate(FontRenderer fontRenderer)
+	{
+		for(Module m : Core.INSTANCE.MODULE_MANAGER.modules)
+		{
+			if(m.isIS_RENDER()) {
+				m.onRender(FontRenderer fontRenderer);
+			}
+		}
+	}
+	
+}

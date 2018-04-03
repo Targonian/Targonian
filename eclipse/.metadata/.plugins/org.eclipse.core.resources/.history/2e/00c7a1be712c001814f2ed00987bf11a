@@ -1,0 +1,12 @@
+package sheep.Client.Modules.Player;
+
+import sheep.Client.Modules.Module;
+
+public class InstantFood extends Module{
+
+	public InstantFood(String Module_Name, int Key_Code, String Char, CATEGORY cat) {
+		super(Module_Name, Key_Code, Char, cat);
+		// TODO Auto-generated constructor stub
+	}
+
+}

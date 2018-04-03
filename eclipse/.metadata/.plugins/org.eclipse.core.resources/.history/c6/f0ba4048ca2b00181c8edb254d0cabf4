@@ -1,0 +1,53 @@
+package sheep.Client.Modules;
+
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.EnumHandSide;
+import net.minecraft.util.math.BlockPos;
+import sheep.Client.Module;
+
+public class Fullbright extends Module {
+
+	public Fullbright() {
+		super("Fullbright", 47, "V", CATEGORY.Render);
+	}
+
+	public void onEnable() {
+		setTICK(true);
+		super.onEnable();
+	}
+
+	public void onDisable() {
+		super.onDisable();
+	}
+
+	public void onTick() {
+		if (isTICK()) {
+			if (isTOGGLE())
+				Gamma_Increase();
+			if (!isTOGGLE())
+				Gamma_Decrease();
+		}
+		super.onRender();
+	}
+
+	private void Gamma_Increase() {
+		if (getMc().gameSettings.gammaSetting <= 5) {
+			getMc().gameSettings.gammaSetting += 0.3F;
+			getCore().print(""+getMc().gameSettings.gammaSetting);
+		}
+		getCore().print(""+getMc().gameSettings.gammaSetting);
+	}
+
+	private void Gamma_Decrease() {
+		// TODO Auto-generated method stub
+		if (getMc().gameSettings.gammaSetting > 1F) {
+			getMc().gameSettings.gammaSetting -= 0.5F;
+			getCore().print(""+getMc().gameSettings.gammaSetting);
+		}else {
+			setTICK(false);
+			getCore().print(""+getMc().gameSettings.gammaSetting);
+			onDisable();
+		}
+	}
+
+}

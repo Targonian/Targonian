@@ -1,0 +1,18 @@
+package targon.Sheep.Client.Events;
+
+import targon.Sheep.Client.Core;
+import targon.Sheep.Client.Module;
+
+public class RenderEvent {
+
+	public void RenderUpdate()
+	{
+		for(Module m : Core.INSTANCE.MODULE_MANAGER.modules)
+		{
+			if(m.isRender()) {
+				m.onTick();
+			}
+		}
+	}
+	
+}

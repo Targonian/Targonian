@@ -1,0 +1,72 @@
+package sheep.Client.Modules;
+
+import java.util.Iterator;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.EnumHand;
+import net.minecraft.world.World;
+import sheep.Client.Module;
+
+public class Fullbright extends Module{
+
+	public Fullbright() {
+		super("Fullbright", 47, "V");
+	}
+	
+	public void onEnable() {
+		setTICK(true);
+		super.onEnable();
+	}
+
+	public void onDisable() {
+		super.onDisable();
+	}
+	
+
+	public void onTick() {
+		if(isTICK()) {
+			if(isTOGGLE())
+				Gamma_Increase();
+			if(!isTOGGLE())
+				Gamma_Decrease();
+		}
+		super.onRender();
+	}
+
+	int time = 1;
+	int range = 4;
+	World mcw;
+	private void Gamma_Increase() {
+		if(getMc().gameSettings.gammaSetting < 150F) {
+			getMc().gameSettings.gammaSetting += 0.3F;
+		}
+		mcw =	getMc().player.world; 
+		time++;
+		for(Iterator<Entity> entities = mcw.loadedEntityList.iterator(); entities.hasNext();)
+		{
+			Entity t_E = entities.next();
+			if(t_E instanceof EntityPlayer)
+			{
+				if(t_E.getName().equalsIgnoreCase(getMc().player.getName()))
+				{
+					
+				}else {
+					if(getMc().player.getDistanceToEntity(t_E) <= range && time >= delay) {
+					getMc().player.swingArm(EnumHand.MAIN_HAND);
+					getMc().playerController.attackEntity(getMc().player, t_E);
+					time = 0;
+					}
+				}
+			}
+		}
+	}
+	
+	private void Gamma_Decrease() {
+		// TODO Auto-generated method stub
+		if(getMc().gameSettings.gammaSetting > 1F) {
+			getMc().gameSettings.gammaSetting -= 0.3F;
+		}
+	}
+
+}

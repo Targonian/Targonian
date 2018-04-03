@@ -1,0 +1,19 @@
+package sheep.Client.Events;
+
+import org.lwjgl.input.Keyboard;
+
+import targon.Sheep.Client.Core;
+import targon.Sheep.Client.Module;
+
+public class KeyboardEvent {
+	public void keyboardupdate(int keyPressed)
+	{
+		for(Module m : Core.INSTANCE.MODULE_MANAGER.modules)
+		{
+			if(Keyboard.isKeyDown(m.getKEY_CODE())) {
+				m.Toggle();
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,12 @@
+[RENDER]
+xx = 150
+yy = 20
+[COMBAT]
+xx = 100
+yy = 20
+[WORLD]
+xx = 150
+yy = 20
+[PLAYER]
+xx = 50
+yy = 150

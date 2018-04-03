@@ -1,0 +1,73 @@
+---- Minecraft Crash Report ----
+// Shall we play a game?
+
+Time: 3/18/18 8:16 PM
+Description: Unexpected error
+
+java.lang.NullPointerException: Unexpected error
+	at targon.Sheep.Client.Modules.Spammer.onTick(Spammer.java:29)
+	at targon.Sheep.Client.Events.TickEvent.TickUpdate(TickEvent.java:13)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1186)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:479)
+	at net.minecraft.client.main.Main.main(Main.java:115)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at targon.Sheep.Client.Modules.Spammer.onTick(Spammer.java:29)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player404'/63, l='MpServer', x=531.85, y=71.00, z=374.79]]
+	Chunk stats: MultiplayerChunkCache: 625, 625
+	Level seed: 0
+	Level generator: ID 02 - largeBiomes, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (584,64,166), Chunk: (at 8,4,6 in 36,10; contains blocks 576,0,160 to 591,255,175), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Level time: 94370 game time, 20247 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 42 total; [EntityRabbit['Rabbit'/128, l='MpServer', x=509.64, y=92.00, z=432.16], EntityRabbit['Rabbit'/129, l='MpServer', x=502.37, y=67.00, z=455.17], EntityRabbit['Rabbit'/133, l='MpServer', x=520.65, y=70.83, z=374.56], EntityRabbit['Rabbit'/134, l='MpServer', x=520.52, y=74.00, z=404.87], EntityRabbit['Rabbit'/135, l='MpServer', x=520.37, y=74.00, z=403.28], EntityRabbit['Rabbit'/136, l='MpServer', x=510.47, y=91.21, z=423.78], EntityRabbit['Rabbit'/137, l='MpServer', x=519.51, y=85.00, z=437.78], EntityRabbit['Rabbit'/138, l='MpServer', x=519.51, y=85.00, z=437.40], EntityRabbit['Rabbit'/139, l='MpServer', x=516.20, y=67.00, z=452.50], EntityRabbit['Rabbit'/13, l='MpServer', x=526.26, y=70.00, z=310.89], EntityRabbit['Rabbit'/142, l='MpServer', x=533.68, y=71.00, z=389.87], EntityRabbit['Rabbit'/14, l='MpServer', x=514.72, y=67.00, z=357.55], EntityMinecartChest['Minecart with Chest'/15, l='MpServer', x=530.50, y=31.06, z=327.49], EntityMinecartChest['Minecart with Chest'/16, l='MpServer', x=532.50, y=31.06, z=329.50], EntityMinecartChest['Minecart with Chest'/17, l='MpServer', x=557.50, y=36.06, z=318.50], EntityRabbit['Rabbit'/18, l='MpServer', x=559.00, y=71.00, z=309.10], EntityMinecartChest['Minecart with Chest'/19, l='MpServer', x=549.50, y=31.06, z=331.50], EntityRabbit['Rabbit'/148, l='MpServer', x=573.60, y=72.00, z=370.79], EntityBat['Bat'/20, l='MpServer', x=553.46, y=34.10, z=352.49], EntityRabbit['Rabbit'/21, l='MpServer', x=559.48, y=72.00, z=336.02], EntityRabbit['Rabbit'/149, l='MpServer', x=572.94, y=69.24, z=407.10], EntityRabbit['Rabbit'/22, l='MpServer', x=557.79, y=71.00, z=362.70], EntityBat['Bat'/25, l='MpServer', x=586.37, y=34.10, z=323.50], EntityMinecartChest['Minecart with Chest'/26, l='MpServer', x=582.51, y=31.00, z=347.51], EntityRabbit['Rabbit'/154, l='MpServer', x=579.50, y=69.28, z=412.22], EntityBat['Bat'/27, l='MpServer', x=595.75, y=24.74, z=352.54], EntityRabbit['Rabbit'/155, l='MpServer', x=590.95, y=71.00, z=450.47], EntityRabbit['Rabbit'/157, l='MpServer', x=598.48, y=71.00, z=427.50], EntityRabbit['Rabbit'/158, l='MpServer', x=594.51, y=70.00, z=444.58], EntityPlayerSP['Player404'/63, l='MpServer', x=531.85, y=71.00, z=374.79], EntityBat['Bat'/104, l='MpServer', x=461.44, y=29.27, z=418.19], EntityRabbit['Rabbit'/109, l='MpServer', x=453.83, y=92.00, z=447.89], EntityBat['Bat'/116, l='MpServer', x=468.62, y=27.29, z=425.95], EntityRabbit['Rabbit'/117, l='MpServer', x=466.68, y=71.00, z=435.49], EntityItem['item.item.dyePowder.black'/2806, l='MpServer', x=495.90, y=49.00, z=387.88], EntityItem['item.item.dyePowder.black'/119, l='MpServer', x=495.13, y=52.00, z=383.88], EntitySquid['Squid'/120, l='MpServer', x=493.40, y=48.00, z=389.42], EntityRabbit['Rabbit'/122, l='MpServer', x=483.98, y=67.00, z=405.32], EntityRabbit['Rabbit'/123, l='MpServer', x=483.75, y=68.00, z=429.39], EntitySquid['Squid'/125, l='MpServer', x=496.15, y=53.00, z=380.55], EntityItem['item.item.dyePowder.black'/126, l='MpServer', x=498.41, y=46.00, z=388.58], EntityRabbit['Rabbit'/127, l='MpServer', x=510.20, y=92.00, z=428.19]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:448)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2997)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:508)
+	at net.minecraft.client.main.Main.main(Main.java:115)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_161, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 701871248 bytes (669 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 35, allocated: 13, tallocated: 99
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: GeForce GTX 960/PCIe/SSE2 GL version 4.6.0 NVIDIA 388.73, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: ~~ERROR~~ NullPointerException: null
+	Profiler Position: N/A (disabled)
+	CPU: 4x Intel(R) Core(TM) i5-6400 CPU @ 2.70GHz

@@ -1,0 +1,5 @@
+package sheep.Client.Managers;
+
+public class ModuleManager {
+
+}

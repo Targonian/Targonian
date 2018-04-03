@@ -1,0 +1,5 @@
+package targon.Sheep.Client;
+
+public enum SKeyCode {
+	SK_SHIFT(46)
+}

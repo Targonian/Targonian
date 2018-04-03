@@ -1,0 +1,91 @@
+package targon.Sheep.Client;
+
+import targon.Sheep.Client.*;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.client.gui.FontRenderer;
+
+public class Module {
+	
+	private Minecraft mc = Minecraft.getMinecraft();
+	private EntityPlayerSP player = mc.player;
+	private FontRenderer fr = mc.fontRendererObj;
+	Core core = Core.INSTANCE;
+	
+	
+	private String MODULE_NAME;
+	private int KEY_CODE;
+	private boolean IS_TOGGLED;
+	
+	
+	public Module(String ModuleName, int KeyCode) 
+	{
+		MODULE_NAME = ModuleName;
+		KEY_CODE = KeyCode;
+		IS_TOGGLED = false;
+	}
+	
+	
+	public void Toggle()
+	{
+		IS_TOGGLED = !IS_TOGGLED;
+		if(IS_TOGGLED)
+		{
+			this.onEnable();
+		}
+		else
+		{
+			this.onDisable();
+		}
+	}
+	
+	/////////////////////////////////////////////////////////////////////
+	
+	public void onEnable()
+	{
+		core.Print("Enabled Module: " + getMODULE_NAME());
+	}
+	
+	public void onDisable()
+	{
+		core.Print("Disabled Module: " + getMODULE_NAME());
+	}
+	
+	///////////////////////////////////////////////////////////////////
+
+	public String getMODULE_NAME() 
+	{
+		return MODULE_NAME;
+	}
+
+
+	public void setMODULE_NAME(String mODULE_NAME) 
+	{
+		MODULE_NAME = mODULE_NAME;
+	}
+
+
+	public int getKEY_CODE() 
+	{
+		return KEY_CODE;
+	}
+
+
+	public void setKEY_CODE(int kEY_CODE) 
+	{
+		KEY_CODE = kEY_CODE;
+	}
+
+
+	public boolean isIS_TOGGLED() {
+		return IS_TOGGLED;
+	}
+
+
+	public void setIS_TOGGLED(boolean iS_TOGGLED) {
+		IS_TOGGLED = iS_TOGGLED;
+	}
+	
+	
+}

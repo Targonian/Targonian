@@ -1,0 +1,5 @@
+package sheep.Client.Modules.Player;
+
+public class InstantFood {
+
+}

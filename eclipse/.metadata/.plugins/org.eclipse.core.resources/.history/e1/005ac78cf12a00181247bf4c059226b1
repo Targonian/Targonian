@@ -1,0 +1,13 @@
+package targon.Sheep.Client.Events;
+
+public class RenderEvent extends Event{
+
+	
+	
+	@Override
+	public void RenderUpdate() {
+		// TODO Auto-generated method stub
+		super.RenderUpdate();
+	}
+	
+}

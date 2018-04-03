@@ -1,0 +1,23 @@
+package sheep.Client.Modules.Player;
+
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.EnumHandSide;
+import net.minecraft.util.math.BlockPos;
+import sheep.Client.Modules.Module;
+
+public class FastWalk extends Module {
+
+	public FastWalk() {
+		super("Fast Walk", 48, "B", CATEGORY.Player);
+	}
+
+	public void onEnable() {
+		super.onEnable();
+	}
+
+	public void onDisable() {
+		super.onDisable();
+	}
+
+
+}

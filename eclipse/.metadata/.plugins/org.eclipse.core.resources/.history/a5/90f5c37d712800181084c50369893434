@@ -1,0 +1,30 @@
+package targon.Sheep.Client;
+
+import org.lwjgl.input.Keyboard;
+
+import targon.Sheep.Client.Events.Event;
+import targon.Sheep.Client.Events.KeyboardKeyEvent;
+import targon.Sheep.Client.Events.TickEvent;
+import targon.Sheep.Client.Modules.FullBright;
+
+public class Core {
+	
+	/**Events	*/
+	public Event KeyboardKey = new KeyboardKeyEvent();
+	public Event Tick = new TickEvent();
+	
+	public static Core INSTANCE = new Core();
+	
+	public ModuleManager MODULE_MANAGER = new ModuleManager();
+	
+	public void loadModules()
+	{
+		MODULE_MANAGER.reg_Module(new FullBright());
+	}
+	
+	public void Print(String x)
+	{
+		System.out.println(x);
+	}
+
+}

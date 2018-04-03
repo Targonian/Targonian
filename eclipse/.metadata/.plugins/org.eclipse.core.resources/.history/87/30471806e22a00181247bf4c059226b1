@@ -1,0 +1,33 @@
+package targon.Sheep.Client.Modules;
+
+import net.minecraft.util.Timer;
+import net.minecraft.util.math.BlockPos;
+import targon.Sheep.Client.Module;
+
+public class Spammer extends Module {
+
+	public Spammer() {
+		super("Spammer", 24, "O");
+	}
+
+	public void onEnable() {
+		setIS_TICKING(true);
+		super.onEnable();
+	}
+
+	public void onDisable() {
+		setIS_TICKING(false);
+		super.onDisable();
+	}
+
+	long lastTime = System.currentTimeMillis();
+	long nowTime = System.currentTimeMillis();
+
+	public void onTick() {
+//		getMc().player
+//				.sendChatMessage("§aJOIN §5TARGONS§6KINGDOM§f.§2MCPRO§f.§3IO §aTODAY FOR §3AWESOME §aPRIZES AND MORE");
+//		getMc().player.sendChatMessage("§6PVP§f,§3KITS§f,§4BUKKIT§f,§5PARTY §aAND MANY MORE");
+
+		super.onTick();
+	}
+}

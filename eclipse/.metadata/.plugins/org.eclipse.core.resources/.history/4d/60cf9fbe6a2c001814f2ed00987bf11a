@@ -1,0 +1,56 @@
+package sheep.Client.Modules;
+
+import java.awt.Color;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Gui;
+import net.minecraft.client.gui.GuiIngame;
+import sheep.Client.Core;
+import sheep.Client.Module;
+import sheep.Client.Modules.HAUD.Menu;
+
+public class HUD extends Module{
+
+	Gui gui2 = Minecraft.getMinecraft().ingameGUI;
+	
+	public HUD() {
+		super("HUD", 54, "R_Shift", CATEGORY.Render);
+	}
+	Manu M_Render,M_Combat,M_World,M_Player;
+	public void onEnable() {
+		M_Render = new Menu(CATEGORY.Render);
+		M_Combat = new Menu(CATEGORY.Combat);
+		M_World = new Menu(CATEGORY.World);
+		M_Player = new Menu(CATEGORY.Player);
+		setRENDER(true);
+		super.onEnable();
+	}
+
+	public void onDisable() {
+		setRENDER(false);
+		super.onDisable();
+	}
+	
+
+	public void onRender() {
+		if(isRENDER()) {
+			Render_HUD();
+		}
+		super.onRender();
+	}
+	
+	
+	private void Render_HUD() {
+		M_Render.render_Menu();
+		M_Combat.render_Menu();
+		M_World.render_Menu();
+		M_Player.render_Menu();
+	}
+	
+	private void draw_LOGO()
+	{
+		
+	}
+	
+	
+}

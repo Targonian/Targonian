@@ -1,0 +1,36 @@
+package targon.Sheep.Client.Window;
+
+import javax.swing.JFrame;
+
+import controlP5.ControlP5;
+import processing.core.PApplet;
+
+public class MC_Window extends PApplet{
+	
+	int WINDOW_WIDTH = 800;
+	int WINDOW_HEIGHT = 600;
+	
+	ControlP5 cp5;
+	CheckBox checkbox;
+
+	public void settings() {
+		size(WINDOW_WIDTH, WINDOW_HEIGHT);
+		super.settings();
+	}
+	
+	
+
+	public void setup() {
+		
+		super.setup();
+	}
+	
+
+	public void draw() {
+		background(0x433212);
+		
+		
+	}
+	
+	
+}

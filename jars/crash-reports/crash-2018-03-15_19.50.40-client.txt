@@ -1,0 +1,85 @@
+---- Minecraft Crash Report ----
+// Who set us up the TNT?
+
+Time: 3/15/18 7:50 PM
+Description: Rendering screen
+
+java.lang.NullPointerException: Rendering screen
+	at net.minecraft.client.gui.inventory.GuiContainerCreative.drawGuiContainerBackgroundLayer(GuiContainerCreative.java:732)
+	at net.minecraft.client.gui.inventory.GuiContainer.drawScreen(GuiContainer.java:104)
+	at net.minecraft.client.renderer.InventoryEffectRenderer.drawScreen(InventoryEffectRenderer.java:50)
+	at net.minecraft.client.gui.inventory.GuiContainerCreative.drawScreen(GuiContainerCreative.java:648)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1195)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1205)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:479)
+	at net.minecraft.client.main.Main.main(Main.java:115)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at net.minecraft.client.gui.inventory.GuiContainerCreative.drawGuiContainerBackgroundLayer(GuiContainerCreative.java:732)
+	at net.minecraft.client.gui.inventory.GuiContainer.drawScreen(GuiContainer.java:104)
+	at net.minecraft.client.renderer.InventoryEffectRenderer.drawScreen(InventoryEffectRenderer.java:50)
+	at net.minecraft.client.gui.inventory.GuiContainerCreative.drawScreen(GuiContainerCreative.java:648)
+
+-- Screen render details --
+Details:
+	Screen name: net.minecraft.client.gui.inventory.GuiContainerCreative
+	Mouse location: Scaled: (213, 119). Absolute: (427, 240)
+	Screen size: Scaled: (427, 240). Absolute: (854, 480). Scale factor of 2
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player996'/68, l='MpServer', x=708.91, y=91.00, z=477.72]]
+	Chunk stats: MultiplayerChunkCache: 594, 594
+	Level seed: 0
+	Level generator: ID 02 - largeBiomes, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (584,64,166), Chunk: (at 8,4,6 in 36,10; contains blocks 576,0,160 to 591,255,175), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Level time: 55663 game time, 55043 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 48 total; [EntityRabbit['Rabbit'/130, l='MpServer', x=663.11, y=63.05, z=412.84], EntityRabbit['Rabbit'/131, l='MpServer', x=658.63, y=63.00, z=422.50], EntityRabbit['Rabbit'/132, l='MpServer', x=655.68, y=64.00, z=419.50], EntityBat['Bat'/69, l='MpServer', x=710.75, y=22.34, z=481.43], EntityBat['Bat'/70, l='MpServer', x=707.62, y=28.12, z=476.19], EntityBat['Bat'/137, l='MpServer', x=675.66, y=30.19, z=396.66], EntityRabbit['Rabbit'/139, l='MpServer', x=676.48, y=67.00, z=397.97], EntityBat['Bat'/140, l='MpServer', x=686.34, y=39.22, z=415.53], EntityBat['Bat'/141, l='MpServer', x=676.20, y=16.59, z=427.34], EntityBat['Bat'/142, l='MpServer', x=675.79, y=19.20, z=427.97], EntitySquid['Squid'/143, l='MpServer', x=682.34, y=58.56, z=432.77], EntitySquid['Squid'/144, l='MpServer', x=681.66, y=60.00, z=428.37], EntitySquid['Squid'/145, l='MpServer', x=680.87, y=60.47, z=444.72], EntitySquid['Squid'/146, l='MpServer', x=677.65, y=62.36, z=441.32], EntitySquid['Squid'/147, l='MpServer', x=676.77, y=61.30, z=450.57], EntitySquid['Squid'/148, l='MpServer', x=677.40, y=59.13, z=436.60], EntitySquid['Squid'/149, l='MpServer', x=675.60, y=57.00, z=431.37], EntitySquid['Squid'/150, l='MpServer', x=680.10, y=60.19, z=450.08], EntitySquid['Squid'/151, l='MpServer', x=678.56, y=59.57, z=448.19], EntitySquid['Squid'/152, l='MpServer', x=674.01, y=62.47, z=448.73], EntityRabbit['Rabbit'/153, l='MpServer', x=683.46, y=86.00, z=499.76], EntityRabbit['Rabbit'/154, l='MpServer', x=682.50, y=86.00, z=504.47], EntityRabbit['Rabbit'/155, l='MpServer', x=683.50, y=86.00, z=504.50], EntityBat['Bat'/158, l='MpServer', x=706.99, y=29.47, z=410.70], EntityBat['Bat'/159, l='MpServer', x=705.88, y=27.04, z=416.99], EntityBat['Bat'/160, l='MpServer', x=695.20, y=21.85, z=429.28], EntitySquid['Squid'/161, l='MpServer', x=689.88, y=62.52, z=457.61], EntityBat['Bat'/163, l='MpServer', x=707.68, y=14.12, z=407.35], EntityBat['Bat'/164, l='MpServer', x=714.03, y=52.31, z=426.30], EntityRabbit['Rabbit'/165, l='MpServer', x=722.37, y=65.20, z=399.50], EntityRabbit['Rabbit'/166, l='MpServer', x=722.52, y=65.00, z=399.50], EntityPlayerSP['Player996'/68, l='MpServer', x=708.91, y=91.00, z=477.72], EntityBat['Bat'/168, l='MpServer', x=715.72, y=22.19, z=429.70], EntityRabbit['Rabbit'/169, l='MpServer', x=731.50, y=70.00, z=445.50], EntityRabbit['Rabbit'/170, l='MpServer', x=732.50, y=70.00, z=446.50], EntityRabbit['Rabbit'/176, l='MpServer', x=750.69, y=70.00, z=421.23], EntityRabbit['Rabbit'/177, l='MpServer', x=748.64, y=70.00, z=462.59], EntityRabbit['Rabbit'/178, l='MpServer', x=741.68, y=68.00, z=464.51], EntityRabbit['Rabbit'/179, l='MpServer', x=743.56, y=69.00, z=464.52], EntityRabbit['Rabbit'/183, l='MpServer', x=753.66, y=70.00, z=411.51], EntityRabbit['Rabbit'/119, l='MpServer', x=637.97, y=70.00, z=419.15], EntityRabbit['Rabbit'/184, l='MpServer', x=758.63, y=69.00, z=410.00], EntityRabbit['Rabbit'/185, l='MpServer', x=766.55, y=68.00, z=451.51], EntityRabbit['Rabbit'/186, l='MpServer', x=767.41, y=68.00, z=449.99], EntityRabbit['Rabbit'/188, l='MpServer', x=770.50, y=70.00, z=452.50], EntityRabbit['Rabbit'/124, l='MpServer', x=644.91, y=71.00, z=410.67], EntityRabbit['Rabbit'/125, l='MpServer', x=644.18, y=72.00, z=409.56], EntityBat['Bat'/191, l='MpServer', x=788.15, y=40.00, z=440.95]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:448)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2997)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:500)
+	at net.minecraft.client.main.Main.main(Main.java:115)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_161, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 761232008 bytes (725 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 99
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: GeForce GTX 960/PCIe/SSE2 GL version 4.6.0 NVIDIA 388.73, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: ~~ERROR~~ NullPointerException: null
+	Profiler Position: N/A (disabled)
+	CPU: 4x Intel(R) Core(TM) i5-6400 CPU @ 2.70GHz

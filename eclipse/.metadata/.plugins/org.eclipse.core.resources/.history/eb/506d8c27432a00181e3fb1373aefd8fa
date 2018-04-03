@@ -1,0 +1,17 @@
+package targon.Sheep.Client.Window;
+
+import javax.swing.JFrame;
+
+import processing.core.PApplet;
+
+public class MC_Window extends PApplet{
+	
+	
+	@Override
+	public void draw() {
+		// TODO Auto-generated method stub
+		super.draw();
+	}
+	
+	
+}

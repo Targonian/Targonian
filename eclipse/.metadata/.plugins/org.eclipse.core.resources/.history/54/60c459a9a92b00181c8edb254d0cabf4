@@ -1,0 +1,37 @@
+package sheep.Client.Modules;
+
+import java.awt.Color;
+
+import sheep.Client.Core;
+import sheep.Client.Module;
+import sheep.Client.Modules.HAUD.Menu;
+
+public class HUD extends Module{
+
+	public HUD() {
+		super("HUD", 54, "R_Shift", CATEGORY.Render);
+	}
+	Menu m;
+	public void onEnable() {
+		setRENDER(true);
+		super.onEnable();
+	}
+
+	public void onDisable() {
+		setRENDER(false);
+		super.onDisable();
+	}
+	
+
+	public void onRender() {
+		if(isRENDER()) {
+			Render_HUD();
+		}
+		super.onRender();
+	}
+	
+	
+	private void Render_HUD() {
+		m.render_Menu();
+	}
+}

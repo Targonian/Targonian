@@ -1,0 +1,55 @@
+package targon.Sheep.Client.Modules;
+
+import java.awt.Color;
+
+import net.minecraft.client.gui.GuiIngame;
+import targon.Sheep.Client.Core;
+import targon.Sheep.Client.Module;
+
+public class HUD extends Module{
+	
+	GuiIngame gui;
+
+	
+	public HUD() {
+		super("HUD", 42, "R_Shift");
+	}
+	
+	public void onEnable() {
+		setIS_RENDER(true);
+		this.gui = getMc().ingameGUI;
+		super.onEnable();
+	}
+
+	public void onDisable() {
+		setIS_RENDER(false);
+		super.onDisable();
+	}
+	
+
+	public void onRender() {
+		if(isIS_RENDER()) {
+			Render_Modules_Enabled();
+		}
+		super.onRender();
+	}
+	
+	private void Render_Modules_Enabled() {
+		int count = 1;
+		for(Module m : Core.INSTANCE.MODULE_MANAGER.modules)
+		{
+			if(!m.isIS_TOGGLED()) 
+			{
+				gui.drawRect(0, 0, 90, 14, new Color(120,160,255,140).getRGB());
+				gui.drawString(gui.getFontRenderer(), m.getMODULE_NAME()+" : "+m.getKEY_NAME(), 5, 10*(count-1)+4, 0xffaaaa);
+				
+			}else if(m.isIS_TOGGLED())
+			{	
+				gui.drawString(gui.getFontRenderer(), m.getMODULE_NAME()+" : "+m.getKEY_NAME(), 5, 10*(count-1)+4, 0xffff);
+			}
+			count++;
+		}
+		count = 1;
+	}
+	
+}

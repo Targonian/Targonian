@@ -1,0 +1,5 @@
+package targon.Sheep.Client.Events;
+
+public class RenderEvent extends Event{
+
+}

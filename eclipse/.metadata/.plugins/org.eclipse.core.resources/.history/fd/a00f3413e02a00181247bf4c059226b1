@@ -1,0 +1,186 @@
+package targon.Sheep.Client;
+
+import targon.Sheep.Client.*;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.client.gui.FontRenderer;
+import net.minecraft.client.multiplayer.PlayerControllerMP;
+import net.minecraft.entity.player.EntityPlayerMP;
+
+public class Module {
+	
+	private Minecraft mc = Minecraft.getMinecraft();
+	private PlayerControllerMP player = Minecraft.getMinecraft().playerController;
+	private FontRenderer fr = mc.fontRendererObj;
+	private Core core = Core.INSTANCE;
+	
+	
+	private String MODULE_NAME;
+	private int KEY_CODE;
+	private String KEY_NAME;
+	private boolean IS_TOGGLED;
+	private boolean IS_TICKING;
+	public boolean IS_RENDER = false;
+	
+	
+	public boolean isIS_RENDER() {
+		return IS_RENDER;
+	}
+
+
+	public void setIS_RENDER(boolean iS_RENDER) {
+		IS_RENDER = iS_RENDER;
+	}
+
+
+	public Module(String ModuleName, int KeyCode, String keyName) 
+	{
+		MODULE_NAME = ModuleName;
+		KEY_CODE = KeyCode;
+		KEY_NAME = keyName;
+		IS_TOGGLED = false;
+		IS_TICKING = false;
+		IS_RENDER = false;
+	}
+	
+	
+	public void Toggle()
+	{
+		IS_TOGGLED = !IS_TOGGLED;
+		if(IS_TOGGLED)
+		{
+			this.onEnable();
+		}
+		else
+		{
+			this.onDisable();
+		}
+	}
+	
+	/////////////////////////////////////////////////////////////////////
+	
+	public void onEnable()
+	{
+		core.Print("Enabled Module: " + getMODULE_NAME());
+	}
+	
+	public void onDisable()
+	{
+		core.Print("Disabled Module: " + getMODULE_NAME());
+	}
+	
+	///////////////////////////////////////////////////////////////////
+
+	public String getMODULE_NAME() 
+	{
+		return MODULE_NAME;
+	}
+
+
+	public void setMODULE_NAME(String mODULE_NAME) 
+	{
+		MODULE_NAME = mODULE_NAME;
+	}
+
+
+	public int getKEY_CODE() 
+	{
+		return KEY_CODE;
+	}
+
+
+	public void setKEY_CODE(int kEY_CODE) 
+	{
+		KEY_CODE = kEY_CODE;
+	}
+
+
+	public boolean isIS_TOGGLED() {
+		return IS_TOGGLED;
+	}
+
+
+	public boolean isIS_TICKING() {
+		return IS_TICKING;
+	}
+
+
+	public void setIS_TICKING(boolean iS_TICKING) {
+		IS_TICKING = iS_TICKING;
+	}
+
+
+	public void setIS_TOGGLED(boolean iS_TOGGLED) {
+		IS_TOGGLED = iS_TOGGLED;
+	}
+
+
+	public Minecraft getMc() {
+		return mc;
+	}
+
+
+	public void setMc(Minecraft mc) {
+		this.mc = mc;
+	}
+
+
+	public String getKEY_NAME() {
+		return KEY_NAME;
+	}
+
+
+	public void setKEY_NAME(String kEY_NAME) {
+		KEY_NAME = kEY_NAME;
+	}
+
+
+	public EntityPlayerSP getPlayer() {
+		return player;
+	}
+
+
+	public void setPlayer(EntityPlayerSP player) {
+		this.player = player;
+	}
+
+
+	public FontRenderer getFr() {
+		return fr;
+	}
+
+
+	public void setFr(FontRenderer fr) {
+		this.fr = fr;
+	}
+
+
+	public Core getCore() {
+		return core;
+	}
+
+
+	public void setCore(Core core) {
+		this.core = core;
+	}
+
+
+	public void onTick() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void onRender() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void setPlayer(PlayerControllerMP player) {
+		this.player = player;
+	}
+	
+	
+}

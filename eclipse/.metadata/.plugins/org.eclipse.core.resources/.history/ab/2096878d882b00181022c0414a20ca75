@@ -1,0 +1,30 @@
+package sheep.Client;
+
+import sheep.Client.Events.KeyboardEvent;
+import sheep.Client.Events.RenderEvent;
+import sheep.Client.Events.TickEvent;
+import targon.Sheep.Client.ModuleManager;
+
+public class Core {
+	/** INSTANCE of the Core */
+	public static Core INSTANCE = new Core();
+	
+	
+	
+	/** Managers */
+	public ModuleManager MODULE_MANAGER;
+	
+	/** Events */
+	public KeyboardEvent E_Keyboard;
+	public RenderEvent E_Render;
+	public TickEvent E_Tick;
+	
+	public void Injection_Point() {
+		print("Injected " + );
+	}
+	
+	private void print(String x) {
+		System.out.println(x);
+	}
+	
+}

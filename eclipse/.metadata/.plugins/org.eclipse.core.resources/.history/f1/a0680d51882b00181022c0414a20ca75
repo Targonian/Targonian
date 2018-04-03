@@ -1,0 +1,18 @@
+package sheep.Client;
+
+import sheep.Client.Events.KeyboardEvent;
+import targon.Sheep.Client.ModuleManager;
+
+public class Core {
+	/** INSTANCE of the Core */
+	public static Core INSTANCE = new Core();
+	
+	/** Managers */
+	public ModuleManager MODULE_MANAGER;
+	/** Events */
+	public KeyboardEvent E_Keyboard;
+	public KeyboardEvent E_Render;
+	public KeyboardEvent E_keyboard;
+	
+	
+}

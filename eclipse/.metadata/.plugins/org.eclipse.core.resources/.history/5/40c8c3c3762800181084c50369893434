@@ -1,0 +1,32 @@
+package targon.Sheep.Client.Modules;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.math.BlockPos;
+import targon.Sheep.Client.Module;
+
+public class Nuker extends Module{
+
+	float Previous_Gamma = 1337;
+	
+	public Nuker() {
+		super("Nuker", 23);
+	}
+	
+	public void onEnable() {
+		setIS_TICKING(true);
+		super.onEnable();
+	}
+	
+	public void onDisable() 
+	{
+		setIS_TICKING(false);
+		super.onDisable();
+	}
+	
+	public void onTick() {
+		EntityPlayer pl = getMc().player;
+		getMc().player.world.destroyBlock(new BlockPos(getMc().this.pl.getPosition().getX()+1, getMc().player.getPosition().getY()+1, getMc().player.getPosition().getZ()+1), false);
+		super.onTick();
+	}
+	
+}

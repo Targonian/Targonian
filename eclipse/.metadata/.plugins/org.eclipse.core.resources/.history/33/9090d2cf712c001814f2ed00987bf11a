@@ -1,0 +1,53 @@
+package sheep.Client.Modules.Player;
+
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.EnumHandSide;
+import net.minecraft.util.math.BlockPos;
+import sheep.Client.Modules.Module;
+
+public class InstantFood extends Module {
+
+	public InstantFood() {
+		super("Fullbright", 47, "V", CATEGORY.Render);
+	}
+
+	public void onEnable() {
+		setTICK(true);
+		super.onEnable();
+	}
+
+	public void onDisable() {
+		super.onDisable();
+	}
+
+	public void onTick() {
+		if (isTICK()) {
+			if (isTOGGLE())
+				Gamma_Increase();
+			if (!isTOGGLE())
+				Gamma_Decrease();
+		}
+		super.onRender();
+	}
+
+	private void Gamma_Increase() {
+		if (getMc().gameSettings.gammaSetting <= 3) {
+			getMc().gameSettings.gammaSetting += 0.35F;
+			getCore().print(""+getMc().gameSettings.gammaSetting);
+		}
+		getCore().print(""+getMc().gameSettings.gammaSetting);
+	}
+
+	private void Gamma_Decrease() {
+		// TODO Auto-generated method stub
+		if (getMc().gameSettings.gammaSetting > 0.7F) {
+			getMc().gameSettings.gammaSetting -= 0.35F;
+			getCore().print(""+getMc().gameSettings.gammaSetting);
+		}else {
+			setTICK(false);
+			getCore().print(""+getMc().gameSettings.gammaSetting);
+			onDisable();
+		}
+	}
+
+}

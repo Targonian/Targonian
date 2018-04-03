@@ -1,0 +1,18 @@
+package targon.Sheep.Client;
+
+import java.util.ArrayList;
+
+public class ModuleManager {
+	
+	ArrayList<Module> modules = new ArrayList<>();
+	
+	public void reg_Module(Module m) {
+		modules.add(m);
+	}
+	
+	public void unload_Module(Module m) {
+		
+	}
+
+
+}

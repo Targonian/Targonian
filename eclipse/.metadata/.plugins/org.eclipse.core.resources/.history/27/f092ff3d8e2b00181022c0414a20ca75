@@ -1,0 +1,18 @@
+package targon.Sheep.Client.Events;
+
+import targon.Sheep.Client.Core;
+import targon.Sheep.Client.Module;
+
+public class TickEvent extends Event{
+	
+	public void TickUpdate()
+	{
+		for(Module m : Core.INSTANCE.MODULE_MANAGER.modules)
+		{
+			if(m.isIS_TICKING()) {
+				m.onTick();
+			}
+		}
+	}
+
+}

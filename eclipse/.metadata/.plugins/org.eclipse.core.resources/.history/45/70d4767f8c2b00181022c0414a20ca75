@@ -1,0 +1,33 @@
+package sheep.Client;
+
+import sheep.Client.Events.KeyboardEvent;
+import sheep.Client.Events.RenderEvent;
+import sheep.Client.Events.TickEvent;
+import sheep.Client.Modules.HUD;
+import sheep.Client.Managers.ModuleManager;
+
+public class Core {
+	/** INSTANCE of the Core */
+	public static Core INSTANCE = new Core();
+	
+	String CORE_NAME = "Sheep-client ";
+	double CORE_VERSION = 2.0;
+	
+	/** Managers */
+	public sheep.Client.Managers.ModuleManager MODULE_MANAGER;
+	
+	/** Events */
+	public KeyboardEvent E_Keyboard;
+	public RenderEvent E_Render;
+	public TickEvent E_Tick;
+	
+	public void Injection_Point() {
+		print("Injected " + CORE_NAME + CORE_VERSION + "into Minecraft.exe");
+		MODULE_MANAGER = new sheep.Client.Managers.ModuleManager();
+	}
+	
+	private void print(String x) {
+		System.out.println(x);
+	}
+	
+}

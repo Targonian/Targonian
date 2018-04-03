@@ -1,0 +1,36 @@
+package targon.Sheep.Client.Window;
+
+import javax.print.attribute.AttributeSetUtilities;
+import javax.swing.JFrame;
+
+import processing.core.PApplet;
+
+public class MC_Window extends PApplet{
+	
+	int WINDOW_WIDTH = 800;
+	int WINDOW_HEIGHT = 600;
+	
+	
+
+	public void settings() {
+		frame.removeNotify();
+		  frame.setUndecorated(true);
+		  AttributeSetUtilities.setWindowOpacity(frame,0.5f);
+		  frame.addNotify();
+		super.settings();
+	}
+	
+	
+
+	public void setup() {
+		
+		super.setup();
+	}
+	
+
+	public void draw() {
+	
+	}
+	
+	
+}

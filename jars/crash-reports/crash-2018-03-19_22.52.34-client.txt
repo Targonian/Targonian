@@ -1,0 +1,83 @@
+---- Minecraft Crash Report ----
+// Everything's going to plan. No, really, that was supposed to happen.
+
+Time: 3/19/18 10:52 PM
+Description: Unexpected error
+
+java.lang.Error: Unresolved compilation problem: 
+	m cannot be resolved
+
+	at sheep.Client.Modules.HUD.Render_HUD(HUD.java:36)
+	at sheep.Client.Modules.HUD.onRender(HUD.java:29)
+	at sheep.Client.Events.RenderEvent.Render_Tick(RenderEvent.java:13)
+	at net.minecraft.client.gui.GuiIngame.renderHotbar(GuiIngame.java:586)
+	at net.minecraft.client.gui.GuiIngame.renderGameOverlay(GuiIngame.java:199)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1173)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1109)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:468)
+	at net.minecraft.client.main.Main.main(Main.java:115)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at sheep.Client.Modules.HUD.Render_HUD(HUD.java:36)
+	at sheep.Client.Modules.HUD.onRender(HUD.java:29)
+	at sheep.Client.Events.RenderEvent.Render_Tick(RenderEvent.java:13)
+	at net.minecraft.client.gui.GuiIngame.renderHotbar(GuiIngame.java:586)
+	at net.minecraft.client.gui.GuiIngame.renderGameOverlay(GuiIngame.java:199)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player977'/54, l='MpServer', x=505.03, y=64.00, z=504.37]]
+	Chunk stats: MultiplayerChunkCache: 529, 529
+	Level seed: 0
+	Level generator: ID 02 - largeBiomes, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (584,64,166), Chunk: (at 8,4,6 in 36,10; contains blocks 576,0,160 to 591,255,175), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Level time: 157395 game time, 20247 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: true), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 45 total; [EntityRabbit['Rabbit'/128, l='MpServer', x=502.68, y=72.06, z=539.06], EntityRabbit['Rabbit'/132, l='MpServer', x=517.84, y=89.00, z=429.46], EntityRabbit['Rabbit'/133, l='MpServer', x=519.50, y=87.00, z=431.97], EntityRabbit['Rabbit'/134, l='MpServer', x=526.51, y=69.00, z=488.02], EntityPlayerSP['Player977'/54, l='MpServer', x=505.03, y=64.00, z=504.37], EntityRabbit['Rabbit'/138, l='MpServer', x=540.65, y=69.00, z=479.72], EntityRabbit['Rabbit'/139, l='MpServer', x=539.61, y=67.00, z=495.50], EntityRabbit['Rabbit'/144, l='MpServer', x=553.78, y=69.00, z=468.59], EntityRabbit['Rabbit'/145, l='MpServer', x=544.58, y=70.00, z=474.70], EntityRabbit['Rabbit'/85, l='MpServer', x=443.59, y=92.13, z=447.89], EntityRabbit['Rabbit'/86, l='MpServer', x=441.20, y=91.00, z=451.66], EntityRabbit['Rabbit'/87, l='MpServer', x=444.80, y=84.00, z=481.51], EntityBat['Bat'/151, l='MpServer', x=563.29, y=15.77, z=432.68], EntityRabbit['Rabbit'/88, l='MpServer', x=434.77, y=70.00, z=563.30], EntityRabbit['Rabbit'/153, l='MpServer', x=562.01, y=71.06, z=435.20], EntityRabbit['Rabbit'/154, l='MpServer', x=574.83, y=70.00, z=435.51], EntityRabbit['Rabbit'/91, l='MpServer', x=432.59, y=72.07, z=576.28], EntityBat['Bat'/155, l='MpServer', x=563.58, y=50.67, z=454.39], EntityRabbit['Rabbit'/156, l='MpServer', x=575.44, y=72.00, z=464.85], EntityRabbit['Rabbit'/157, l='MpServer', x=564.51, y=70.00, z=492.56], EntityRabbit['Rabbit'/158, l='MpServer', x=574.89, y=71.00, z=487.71], EntityRabbit['Rabbit'/159, l='MpServer', x=573.52, y=70.00, z=543.44], EntityBat['Bat'/96, l='MpServer', x=454.63, y=26.92, z=446.64], EntityBat['Bat'/160, l='MpServer', x=566.29, y=36.66, z=556.31], EntitySquid['Squid'/97, l='MpServer', x=454.60, y=44.00, z=444.40], EntityBat['Bat'/161, l='MpServer', x=565.19, y=38.50, z=559.87], EntitySquid['Squid'/98, l='MpServer', x=454.60, y=44.00, z=446.37], EntityBat['Bat'/162, l='MpServer', x=571.47, y=43.10, z=556.44], EntityItem['item.item.dyePowder.black'/99, l='MpServer', x=450.81, y=50.00, z=447.08], EntityRabbit['Rabbit'/163, l='MpServer', x=565.74, y=70.00, z=569.16], EntityRabbit['Rabbit'/100, l='MpServer', x=461.49, y=90.13, z=448.05], EntityRabbit['Rabbit'/101, l='MpServer', x=462.53, y=76.00, z=467.51], EntityRabbit['Rabbit'/102, l='MpServer', x=448.42, y=84.00, z=485.52], EntityRabbit['Rabbit'/103, l='MpServer', x=462.32, y=67.00, z=565.49], EntityRabbit['Rabbit'/167, l='MpServer', x=582.20, y=70.00, z=552.40], EntityBat['Bat'/108, l='MpServer', x=470.01, y=27.91, z=424.18], EntityBat['Bat'/110, l='MpServer', x=472.54, y=26.97, z=449.74], EntityBat['Bat'/2034, l='MpServer', x=575.50, y=38.00, z=538.50], EntityBat['Bat'/118, l='MpServer', x=480.31, y=25.90, z=451.40], EntityBat['Bat'/119, l='MpServer', x=483.27, y=23.83, z=453.62], EntityRabbit['Rabbit'/120, l='MpServer', x=485.40, y=71.00, z=517.47], EntityRabbit['Rabbit'/121, l='MpServer', x=492.49, y=70.00, z=529.30], EntityRabbit['Rabbit'/123, l='MpServer', x=506.46, y=92.12, z=425.61], EntityRabbit['Rabbit'/125, l='MpServer', x=509.06, y=82.00, z=443.63], EntityRabbit['Rabbit'/126, l='MpServer', x=511.44, y=64.23, z=495.49]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:448)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2586)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:488)
+	at net.minecraft.client.main.Main.main(Main.java:115)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_161, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 676983168 bytes (645 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 4, tcache: 0, allocated: 13, tallocated: 99
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: GeForce GTX 960/PCIe/SSE2 GL version 4.6.0 NVIDIA 388.73, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: ~~ERROR~~ NullPointerException: null
+	Profiler Position: N/A (disabled)
+	CPU: 4x Intel(R) Core(TM) i5-6400 CPU @ 2.70GHz

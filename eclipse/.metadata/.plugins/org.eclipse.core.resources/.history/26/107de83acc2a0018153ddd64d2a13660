@@ -1,0 +1,38 @@
+package targon.Sheep.Client;
+
+import processing.core.PApplet;
+import targon.Sheep.Client.Events.Event;
+import targon.Sheep.Client.Events.KeyboardKeyEvent;
+import targon.Sheep.Client.Events.RenderEvent;
+import targon.Sheep.Client.Events.TickEvent;
+import targon.Sheep.Client.Modules.FullBright;
+import targon.Sheep.Client.Modules.Spammer;
+
+public class Core {
+	public static Core INSTANCE = new Core();
+	public ModuleManager MODULE_MANAGER = new ModuleManager();
+	
+	/** Events										*/
+	public Event KeyboardKey = new KeyboardKeyEvent();
+	public Event Tick = new TickEvent();
+	public Event RenderUpdate = new RenderEvent();
+	
+	public void Inject() {
+		PApplet.main("targon.Sheep.Client.Window.MC_Window");
+		loadModules();
+	}
+	
+	public void loadModules()
+	{
+		MODULE_MANAGER.reg_Module(new HUD());
+		MODULE_MANAGER.reg_Module(new FullBright());
+		MODULE_MANAGER.reg_Module(new Spammer());
+
+	}
+	
+	public void Print(String x)
+	{
+		System.out.println(x);
+	}
+
+}

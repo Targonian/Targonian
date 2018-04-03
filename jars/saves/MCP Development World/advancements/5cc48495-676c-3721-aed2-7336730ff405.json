@@ -1,0 +1,15 @@
+{
+  "minecraft:recipes/redstone/dispenser": {
+    "criteria": {
+      "has_bow": "2018-03-15 18:24:18 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "beaches": "2018-03-15 18:24:19 +0100",
+      "desert": "2018-03-15 18:25:14 +0100"
+    },
+    "done": false
+  }
+}

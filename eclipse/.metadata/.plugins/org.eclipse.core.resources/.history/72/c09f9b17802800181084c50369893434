@@ -1,0 +1,40 @@
+package targon.Sheep.Client.Modules;
+
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.math.BlockPos;
+import targon.Sheep.Client.Module;
+
+public class Nuker extends Module{
+
+	EntityPlayer pl;
+	
+	public Nuker() {
+		super("Nuker", 23);
+	}
+	
+	public void onEnable() {
+		setIS_TICKING(true);
+		super.onEnable();
+	}
+	
+	public void onDisable() 
+	{
+		setIS_TICKING(false);
+		super.onDisable();
+	}
+	
+	public void onTick() {
+		pl = getMc().player;
+		for(int xO = 0; xO <= 100; xO++) {
+			for(int zO = 0; xO <= 0; xO++) {
+				for(int yO = 0; xO <= 1; xO++) {
+					getMc().getIntegratedServer().getEntityWorld().setBlockState();
+				}
+			}
+		}
+		super.onTick();
+	}
+	
+}
